@@ -1,7 +1,10 @@
-import { Inter } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import "./globals.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+// import useScrollRestoration from "./components/useScrollRestoration";
 
-const inter = Inter({ subsets: ["latin"] });
+const leagueSpartan = League_Spartan({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -9,9 +12,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // useScrollRestoration();
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* <useScrollRestoration/> */}
+      <body className={leagueSpartan.className}>{children}</body>
     </html>
   );
 }
